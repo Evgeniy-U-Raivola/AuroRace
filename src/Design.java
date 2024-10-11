@@ -6,7 +6,7 @@ import java.text.AttributedString;
 
 public class Design extends JComponent {
      float[] dash=new float[] {10,20,10,20};
-
+     @Override
      public  void paint (Graphics g) {
           Graphics2D g1=(Graphics2D)g;
           Color clr=new Color(220, 30, 90, 255);
@@ -17,16 +17,22 @@ public class Design extends JComponent {
 
           BasicStroke pen1=new BasicStroke(2);
           BasicStroke pen2=new BasicStroke(3,1,1,1,dash,0);
+          BasicStroke pen3=new BasicStroke(6,1,1,1,dash,0);
           g1.setColor(Color.BLACK);
           g1.setStroke(pen1);
           g1.drawLine(100,120,1110,120);
           g1.drawLine(100,240,1110,240);
           g1.drawLine(100,360,1110,360);
           g1.drawLine(100,480,1110,480);
+//  finish line
           g1.setColor(Color.RED);
           g1.setStroke(pen2);
           g1.drawLine(1100,50,1100,550);
-
+//  start line
+//          g1.setStroke(pen3);
+//          g1.setColor(Color.DARK_GRAY);
+//          g1.drawLine(210,10,210,590);
+//
           AffineTransform origLabel;
           origLabel=g1.getTransform();
           AffineTransform newLabel=(AffineTransform)origLabel.clone();
