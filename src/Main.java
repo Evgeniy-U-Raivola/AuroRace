@@ -17,7 +17,7 @@ public class Main extends JFrame {
     public static void main(String[] args) throws Exception {
          String[] vehickle=new String[] {"Black","Yellow","Red","Blue","Green"};
          int[] coordY=new int[] {10,135,245,370,490};
-        int[] coordX=new int[] {10,10,10,10,10};
+         int[] coordX=new int[] {10,10,10,10,10};
 
         Nring.setBounds(0,0,1250,650);
         Nring.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
